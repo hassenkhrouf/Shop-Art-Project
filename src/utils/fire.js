@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "eenAIkLhnVsdtCIfNkg9APIRBr5yohXMni3b4nJ7",
+  apiKey: "5zv6s5DM3fIXHgpExL6dcutv7lWIyDfaGnLR43jt",
   authDomain: "shop-art-project.firebaseapp.com",
   databaseURL:
     "https://shop-art-project-default-rtdb.europe-west1.firebasedatabase.app",
