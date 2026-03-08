@@ -27,8 +27,8 @@ export default function Lazy() {
 
   const navigate = useNavigate();
   return (
-    <div className="container" >
-      <div className="row row-cols-lg-5 ">
+    <div className="container">
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
         {cards === null ? (
           <h1> Loading ...</h1>
         ) : (
