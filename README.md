@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+## Shop Art Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Digital art storefront built with React and Firebase. It showcases AI‑generated artworks, lets visitors browse artworks by card, and provides an admin dashboard to manage the catalog and incoming orders/comments.
 
-## Available Scripts
+### Features
 
-In the project directory, you can run:
+- **Public storefront**
+  - Responsive home page with hero carousel and navigation.
+  - Lazy‑loaded gallery of artworks pulled from Firebase Realtime Database (`MyWorks/`).
+  - Artwork detail page with large preview and order form modal.
+- **Contact & orders**
+  - Contact form for general inquiries (stored under `/Comments`).
+  - Order form that captures artwork information and saves to `/Orders` in Firebase.
+- **Admin dashboard**
+  - Email/password authentication using Firebase Auth.
+  - Admin area to add new artworks (title, description, price, image URL).
+  - Inbox, orders and files sections (layout prepared, can be extended).
 
-### `npm start`
+### Tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 18, React Router, Bootstrap 5, AOS (scroll animations)
+- **Backend / data**: Firebase v9 (modular) – Auth + Realtime Database
+- **Tooling**: Create React App, ESLint (CRA defaults), npm / yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Getting started
 
-### `npm test`
+- **1. Install dependencies**
+  - With npm: `npm install`
+  - Or with yarn: `yarn install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **2. Configure Firebase**
+  - Create a Firebase project and enable:
+    - Email/password authentication.
+    - Realtime Database (in test or locked‑down mode, as you prefer).
+  - In `src/utils/fire.js`, set your Firebase config (API key, project ID, etc.).  
+    Do not commit secrets that should stay private.
 
-### `npm run build`
+- **3. Run the app in development**
+  - `npm start` or `yarn start`
+  - Open `http://localhost:3000` in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **4. Production build**
+  - `npm run build` or `yarn build`
+  - The optimized static build is output to the `build` folder and can be deployed to any static host.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Project structure (high level)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **`src/components/Home.js`** – Landing page, carousel, “What We Offer ?” section, gallery + contact.
+- **`src/components/Lazy.js`** – Fetches artworks from Firebase and renders responsive cards.
+- **`src/components/Card.js`** – Single artwork detail + order modal.
+- **`src/components/admin/*`** – Admin views (`Dashboard`, `AddWork`, `Inbox`, `Orders`, `Files`).
+- **`src/components/Login.js`** – Admin login form using Firebase Auth.
+- **`src/ressources`** – Static images and icons used across the UI.
 
-### `npm run eject`
+### Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **`npm start` / `yarn start`**: Start the dev server.
+- **`npm test` / `yarn test`**: Run tests (CRA default setup).
+- **`npm run build` / `yarn build`**: Create a production build.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Any static hosting that can serve the `build` folder will work (e.g. GitHub Pages, Netlify, Vercel, Firebase Hosting).  
+Follow the host’s documentation to point it at the `build` directory produced by `npm run build`.
