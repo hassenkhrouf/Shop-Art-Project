@@ -29,7 +29,7 @@ export default function Card() {
               />
             </div>
             <div className="col-md-8">
-              <div class="card-header text-danger text-center">
+              <div className="card-header text-danger text-center">
                 <h5> {item[1].Title}</h5>
               </div>
               <div className="card-body">

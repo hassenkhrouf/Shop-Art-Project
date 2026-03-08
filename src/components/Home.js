@@ -13,7 +13,8 @@ import SubNavbar from "./SubNavbar";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Lazy from "./Lazy";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -95,7 +96,7 @@ export default function Home() {
           <div className="card-body">
             <blockquote className="blockquote blockquote-custom bg-white px-3 pt-4">
               <div className="blockquote-custom-icon bg-info shadow-1-strong">
-              <FontAwesomeIcon icon="fa-solid fa-quote-left text-white" />
+                <FontAwesomeIcon icon={faQuoteLeft} className="text-white" />
               </div>
               <p className="mb-0 mt-2 font-italic">
               Finding the art in neural networks. Our mission is to revolutionise

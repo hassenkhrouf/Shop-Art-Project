@@ -43,26 +43,38 @@
 .what-we-offer{
     position: relative;
     text-align: center;
-    color: white;
+    padding: 4rem 1rem;
+    overflow: hidden;
+}
+
+.what-we-offer > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
 .what-offer-content{
-    position: absolute;
-    top: 10%;
-    left: 9%;
-    background-color: rgba(140, 136, 136, 0.638);
-    color: black;
-    border-radius: 10px;
-    width: 80%;
-
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .what-offer-content h2 , .what-offer-content p {
-    padding: 5%;
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    font-family: 'Tajawal';
+    padding: 0.5rem 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    font-family: 'Tajawal', sans-serif;
 }
 .what-offer-content button{
     
@@ -112,17 +124,18 @@
         color: #000;
     }
 
+    .what-we-offer{
+        padding: 3rem 1rem;
+    }
+
     .what-offer-content{
-        position: static;
         width: 100%;
-        margin-top: 1rem;
-        padding: 1rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .what-offer-content h2,
     .what-offer-content p {
         font-size: 16px;
-        padding: 0.75rem 1rem;
     }
 
     .line>img{

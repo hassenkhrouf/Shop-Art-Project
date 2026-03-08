@@ -89,7 +89,7 @@ export default function Footer() {
                   </a>
                 </p>
                 <ul className="social-footer2">
-                  <li className>
+                  <li className="">
                     <a
                       title="youtube"
                       href="https://www.youtube.com/"
@@ -103,7 +103,7 @@ export default function Footer() {
                       />
                     </a>
                   </li>
-                  <li className>
+                  <li className="">
                     <a
                       href="https://www.facebook.com/"
                       title="Facebook"
@@ -117,7 +117,7 @@ export default function Footer() {
                       />
                     </a>
                   </li>
-                  <li className>
+                  <li className="">
                     <a
                       href="https://twitter.com"
                       title="Twitter"
@@ -131,7 +131,7 @@ export default function Footer() {
                       />
                     </a>
                   </li>
-                  <li className>
+                  <li className="">
                     <a
                       title="instagram"
                       href="https://www.instagram.com/"
