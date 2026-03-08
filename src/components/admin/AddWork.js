@@ -14,7 +14,7 @@ export default function AddWork() {
     if (
       title.trim().length <= 1 ||
       description.trim().length <= 1 ||
-      price == 0 ||
+      price === 0 ||
       url.length <= 1
     ) {
       Swal.fire("Please Fill All information", "", "error");
@@ -81,7 +81,7 @@ export default function AddWork() {
       <div className="col-md-4  artPic">
         <img
           src={url ? url : bgArt}
-          alt=" Picture Art : incorrect link !!!"
+          alt="Artwork preview (check link)"
           className="rounded"
         />
       </div>

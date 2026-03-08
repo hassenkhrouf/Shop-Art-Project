@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ref, onValue } from "firebase/database";
 import { db } from "../utils/fire";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -41,7 +41,7 @@ export default function Lazy() {
               >
                 <img
                   src={item[1].PhotoURL}
-                  alt="Art Picture"
+                  alt="Artwork"
                   style={{ height: "25vh", borderRadius: "20px 20px 0 0" }}
                 />
                 <div className="card-body text-center">
@@ -62,7 +62,7 @@ export default function Lazy() {
                     className="btn btn-success w-100"
                     style={{ borderRadius: "0" }}
                   >
-                    <i class="bi bi-cart"></i>Buy
+                    <i className="bi bi-cart" />Buy
                   </button>
                 </div>
               </div>

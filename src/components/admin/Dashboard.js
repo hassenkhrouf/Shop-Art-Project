@@ -4,14 +4,7 @@ import AddWork from "./AddWork";
 import Inbox from "./Inbox";
 import Order from "./Orders";
 import Files from "./Files";
-import {
-  mailBox,
-  insertWork,
-  Left,
-  orderes,
-  gear,
-  files,
-} from "../../ressources";
+import { mailBox, insertWork, Left, orderes, files } from "../../ressources";
 
 export default function Dashboard(props) {
   const { handleLogOut } = props;
@@ -23,16 +16,16 @@ export default function Dashboard(props) {
     <div className="dashboard row ">
       <ul className="nav  bg-light navbarColor">
         <li className="nav-item">
-          <a className="nav-link active" href="#">
+          <div className="nav-link active">
             <img src={Left} alt="insert" width="30px" height="30px" />
             <Link to="/" className="btn">
               Back
             </Link>
-          </a>
+          </div>
         </li>
         <div className="d-flex justify-content-center">
           <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <div className="nav-link active">
               {contentPic === "insertWork" ? (
                 <img src={insertWork} alt="insert" width="30px" height="30px" />
               ) : (
@@ -47,10 +40,10 @@ export default function Dashboard(props) {
               >
                 Add Work
               </button>
-            </a>
+            </div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <div className="nav-link">
               {contentPic === "mailBox" ? (
                 <img src={mailBox} alt="insert" width="30px" height="30px" />
               ) : (
@@ -65,10 +58,10 @@ export default function Dashboard(props) {
               >
                 Inbox
               </button>
-            </a>
+            </div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <div className="nav-link">
               {contentPic === "orderes" ? (
                 <img src={orderes} alt="insert" width="30px" height="30px" />
               ) : (
@@ -83,10 +76,10 @@ export default function Dashboard(props) {
               >
                 Orders
               </button>
-            </a>
+            </div>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <div className="nav-link">
               {contentPic === "files" ? (
                 <img src={files} alt="insert" width="30px" height="30px" />
               ) : (
@@ -101,17 +94,17 @@ export default function Dashboard(props) {
               >
                 Files
               </button>
-            </a>
+            </div>
           </li>
         </div>
         <li className="nav-item ">
-          <a className="nav-link" href="#">
+          <div className="nav-link">
             <button className="btn btn-danger " onClick={handleLogOut}>
               <Link className="text-white text-decoration-none" to="/">
                 Deconnexion
               </Link>
             </button>{" "}
-          </a>
+          </div>
         </li>
       </ul>
 
